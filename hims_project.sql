@@ -725,7 +725,7 @@ CREATE TABLE [dbo].[ClinicalNote](
 
 ALTER TABLE [dbo].[ClinicalNote]  ADD CONSTRAINT [FK_ClinicalNote_Admission] FOREIGN KEY([AdmissionId])
 REFERENCES [dbo].[Admission] ([AdmissionId])
-
+GO
 
 ALTER TABLE [dbo].[AccessRights] ADD  DEFAULT ((1)) FOR [Status]
 GO
