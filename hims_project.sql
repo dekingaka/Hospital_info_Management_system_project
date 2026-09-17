@@ -150,3 +150,278 @@ CREATE TABLE [dbo].[Bill](
 ) 
 ) 
 GO
+
+
+
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Charge](
+	[ChargeId] [bigint] IDENTITY(1,1) NOT NULL,
+	[VisitId] [bigint] NULL,
+	[AdmissionId] [bigint] NULL,
+	[ServiceId] [bigint] NOT NULL,
+	[Rate] [numeric](18, 2) NOT NULL,
+	[Quantity] [int] NOT NULL,
+	[Amount] [numeric](18, 2) NOT NULL,
+	[Concession] [numeric](18, 2) NULL,
+	[Status] [bit] NULL,
+	[AddedBy] [int] NULL,
+	[AddedDateTime] [datetime] NULL,
+	[UpdatedBy] [bigint] NULL,
+	[UpdatedDateTime] [datetime] NULL,
+ CONSTRAINT [PK__Charge__17FC361B131A7AE4] PRIMARY KEY CLUSTERED 
+(
+	[ChargeId] ASC
+) 
+) 
+GO
+
+
+
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[City](
+	[CityID] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](50) NOT NULL,
+	[StateID] [int] NOT NULL,
+	[Status] [bit] NULL,
+	[AddedBy] [int] NULL,
+	[AddedDateTime] [datetime] NULL,
+	[UpdatedBy] [bigint] NULL,
+	[UpdatedDateTime] [datetime] NULL,
+ CONSTRAINT [PK__City__F2D21A96E551186A] PRIMARY KEY CLUSTERED 
+(
+	[CityID] ASC
+) 
+) 
+GO
+
+
+
+
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Country](
+	[CountryID] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](50) NOT NULL,
+	[NationalityID] [int] NULL,
+	[Status] [bit] NULL,
+	[AddedBy] [int] NULL,
+	[AddedDateTime] [datetime] NULL,
+	[UpdatedBy] [bigint] NULL,
+	[UpdatedDateTime] [datetime] NULL,
+ CONSTRAINT [PK__Country__10D160BF12515864] PRIMARY KEY CLUSTERED 
+(
+	[CountryID] ASC
+) 
+) 
+GO
+
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Department](
+	[DepartmentID] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](50) NOT NULL,
+	[IsClinical] [bit] NOT NULL,
+	[Status] [bit] NULL,
+	[AddedBy] [int] NULL,
+	[AddedDateTime] [datetime] NULL,
+	[UpdatedBy] [bigint] NULL,
+	[UpdatedDateTime] [datetime] NULL,
+ CONSTRAINT [PK__Departme__BF50FAFB2901D316] PRIMARY KEY CLUSTERED 
+(
+	[DepartmentID] ASC
+) 
+) 
+GO
+
+
+
+
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Discharge](
+	[DischargeId] [bigint] IDENTITY(1,1) NOT NULL,
+	[AdmissionId] [bigint] NOT NULL,
+	[DoctorId] [bigint] NOT NULL,
+	[DischargeDate] [datetime] NOT NULL,
+	[DischargeNotes] [nvarchar](2000) NULL,
+	[FileAttachedPath] [nvarchar](500) NULL,
+	[Status] [bit] NULL,
+	[AddedBy] [int] NULL,
+	[AddedDateTime] [datetime] NULL,
+	[UpdatedBy] [bigint] NULL,
+	[UpdatedDateTime] [datetime] NULL,
+ CONSTRAINT [PK__Discharg__CBC0800799D57BD3] PRIMARY KEY CLUSTERED 
+(
+	[DischargeId] ASC
+) 
+) 
+GO
+
+
+
+
+
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Doctor](
+	[DoctorID] [bigint] IDENTITY(1,1) NOT NULL,
+	[DepartmentID] [int] NOT NULL,
+	[FirstName] [nvarchar](150) NOT NULL,
+	[MiddleName] [nvarchar](150) NULL,
+	[LastName] [nvarchar](150) NOT NULL,
+	[Qualification] [nvarchar](150) NULL,
+	[GenderID] [int] NULL,
+	[DateOfBirth] [date] NULL,
+	[ContactNo1] [nvarchar](15) NULL,
+	[ContactNo2] [nvarchar](15) NULL,
+	[Email] [nvarchar](100) NULL,
+	[AddressLine1] [nvarchar](150) NULL,
+	[AddressLine2] [nvarchar](150) NULL,
+	[Pincode] [nvarchar](10) NULL,
+	[CityID] [int] NULL,
+	[Status] [bit] NULL,
+	[AddedBy] [int] NULL,
+	[AddedDateTime] [datetime] NULL,
+	[UpdatedBy] [bigint] NULL,
+	[UpdatedDateTime] [datetime] NULL,
+ CONSTRAINT [PK__Doctor__2DC00EDF448A8A51] PRIMARY KEY CLUSTERED 
+(
+	[DoctorID] ASC
+) 
+) 
+GO
+
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Gender](
+	[GenderID] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](50) NOT NULL,
+	[Status] [bit] NULL,
+	[AddedBy] [int] NULL,
+	[AddedDateTime] [datetime] NULL,
+	[UpdatedBy] [bigint] NULL,
+	[UpdatedDateTime] [datetime] NULL,
+ CONSTRAINT [PK__Gender__4E24E81738FADBDD] PRIMARY KEY CLUSTERED 
+(
+	[GenderID] ASC
+) 
+) 
+GO
+
+
+
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[InsuranceCompany](
+	[CompanyId] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](50) NOT NULL,
+	[Status] [bit] NULL,
+	[AddedBy] [int] NULL,
+	[AddedDateTime] [datetime] NULL,
+	[UpdatedBy] [bigint] NULL,
+	[UpdatedDateTime] [datetime] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[CompanyId] ASC
+) 
+) 
+GO
+
+
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Nationality](
+	[NationalityID] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](50) NOT NULL,
+	[Status] [bit] NULL,
+	[AddedBy] [int] NULL,
+	[AddedDateTime] [datetime] NULL,
+	[UpdatedBy] [int] NULL,
+	[UpdatedDateTime] [datetime] NULL,
+ CONSTRAINT [PK__National__F628E7A4F44C1021] PRIMARY KEY CLUSTERED 
+(
+	[NationalityID] ASC
+) 
+) 
+GO
+
+
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Patient](
+	[PatientID] [bigint] IDENTITY(1,1) NOT NULL,
+	[FirstName] [nvarchar](150) NOT NULL,
+	[MiddleName] [nvarchar](150) NULL,
+	[LastName] [nvarchar](150) NOT NULL,
+	[GenderID] [int] NOT NULL,
+	[DateOfBirth] [date] NULL,
+	[ContactNo1] [nvarchar](15) NULL,
+	[ContactNo2] [nvarchar](15) NULL,
+	[Email] [nvarchar](100) NULL,
+	[AddressLine1] [nvarchar](150) NULL,
+	[AddressLine2] [nvarchar](150) NULL,
+	[Pincode] [nvarchar](10) NULL,
+	[CityID] [int] NULL,
+	[Status] [bit] NULL,
+	[AddedBy] [int] NULL,
+	[AddedDateTime] [datetime] NULL,
+	[UpdatedBy] [bigint] NULL,
+	[UpdatedDateTime] [datetime] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[PatientID] ASC
+) 
+) 
+GO
+
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[PatientCategory](
+	[PatientCategoryID] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](50) NOT NULL,
+	[Status] [bit] NULL,
+	[AddedBy] [int] NULL,
+	[AddedDateTime] [datetime] NULL,
+	[UpdatedBy] [bigint] NULL,
+	[UpdatedDateTime] [datetime] NULL,
+ CONSTRAINT [PK__PatientC__F659E81CA9686ED9] PRIMARY KEY CLUSTERED 
+(
+	[PatientCategoryID] ASC
+) 
+) 
+GO
