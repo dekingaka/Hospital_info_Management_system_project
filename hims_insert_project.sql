@@ -50,3 +50,6 @@ Insert Into InsuranceCompany(Name,AddedBy,UpdatedBy) Values ('De-kings Healthcar
 Insert Into InsuranceCompany(Name,AddedBy,UpdatedBy) Values ('The oriental Insurance company',1,1)
 Insert Into InsuranceCompany(Name,AddedBy,UpdatedBy) Values ('Care Health Insurance',1,1)
 GO
+
+Insert Into Nationality(Name,AddedBy,UpdatedBy) Values ('Indian',1,1)
+GO
