@@ -106,3 +106,27 @@ Insert Into Unit(Name,AddedBy,UpdatedBy) Values ('Unit 4',1,1)
 Insert Into Unit(Name,AddedBy,UpdatedBy) Values ('Unit 5',1,1)
 GO
 
+
+Insert Into Ward(Name,UnitId,AddedBy,UpdatedBy) Values ('General Ward',1,1,1)
+Insert Into Ward(Name,UnitId,AddedBy,UpdatedBy) Values ('Male Ward',1,1,1)
+Insert Into Ward(Name,UnitId,AddedBy,UpdatedBy) Values ('Female Ward',1,1,1)
+Insert Into Ward(Name,UnitId,AddedBy,UpdatedBy) Values ('pediatric ward',1,1,1)
+Insert Into Ward(Name,UnitId,AddedBy,UpdatedBy) Values ('Special Ward',1,1,1)
+Insert Into Ward(Name,UnitId,AddedBy,UpdatedBy) Values ('Semi Special ward',1,1,1)
+Insert Into Ward(Name,UnitId,AddedBy,UpdatedBy) Values ('Geneal Ward II',1,1,1)
+GO
+
+Insert Into Room(Name,Wardid,AddedBy,UpdatedBy) Values ('Room 1',5,1,1)
+Insert Into Room(Name,Wardid,AddedBy,UpdatedBy) Values ('Room 2',5,1,1)
+Insert Into Room(Name,Wardid,AddedBy,UpdatedBy) Values ('Room 3',5,1,1)
+Insert Into Room(Name,Wardid,AddedBy,UpdatedBy) Values ('Room 4',5,1,1)
+Insert Into Room(Name,Wardid,AddedBy,UpdatedBy) Values ('Room 5',5,1,1)
+Insert Into Room(Name,Wardid,AddedBy,UpdatedBy) Values ('Room 6',5,1,1)
+Insert Into Room(Name,Wardid,AddedBy,UpdatedBy) Values ('Room 7',5,1,1)
+Insert Into Room(Name,Wardid,AddedBy,UpdatedBy) Values ('Room 8',6,1,1)
+Insert Into Room(Name,Wardid,AddedBy,UpdatedBy) Values ('Room 9',6,1,1)
+Insert Into Room(Name,Wardid,AddedBy,UpdatedBy) Values ('Room 10',6,1,1)
+Insert Into Room(Name,Wardid,AddedBy,UpdatedBy) Values ('Room 11',7,1,1)
+Insert Into Room(Name,Wardid,AddedBy,UpdatedBy) Values ('Room 12',7,1,1)
+Insert Into Room(Name,Wardid,AddedBy,UpdatedBy) Values ('Room 13',7,1,1)
+GO
