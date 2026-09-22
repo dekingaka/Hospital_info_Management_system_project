@@ -35,3 +35,8 @@ Insert Into Department(Name,isClinical,AddedBy,UpdatedBy) Values ('Radiology',0,
 Insert Into Department(Name,isClinical,AddedBy,UpdatedBy) Values ('Nursing',0,1,1)
 Insert Into Department(Name,isClinical,AddedBy,UpdatedBy) Values ('Pharmacy',0,1,1)
 GO
+
+
+Insert Into Gender(Name,AddedBy,UpdatedBy) Values ('Male',1,1)
+Insert Into Gender(Name,AddedBy,UpdatedBy) Values ('Female',1,1)
+GO
