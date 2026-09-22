@@ -63,3 +63,46 @@ WHERE Name = 'Indian';
 UPDATE Nationality
 SET NationalityID = 1
 WHERE NationalityID = 2;
+
+Insert Into Relation(Name,AddedBy,UpdatedBy) Values ('Self',1,1)
+Insert Into Relation(Name,AddedBy,UpdatedBy) Values ('Spouse',1,1)
+Insert Into Relation(Name,AddedBy,UpdatedBy) Values ('Child',1,1)
+Insert Into Relation(Name,AddedBy,UpdatedBy) Values ('Friend',1,1)
+Insert Into Relation(Name,AddedBy,UpdatedBy) Values ('Father',1,1)
+Insert Into Relation(Name,AddedBy,UpdatedBy) Values ('Mother',1,1)
+Insert Into Relation(Name,AddedBy,UpdatedBy) Values ('Son',1,1)
+Insert Into Relation(Name,AddedBy,UpdatedBy) Values ('Brother',1,1)
+Insert Into Relation(Name,AddedBy,UpdatedBy) Values ('Sister',1,1)
+Insert Into Relation(Name,AddedBy,UpdatedBy) Values ('Daughter',1,1)
+Insert Into Relation(Name,AddedBy,UpdatedBy) Values ('Sister In Law',1,1)
+Insert Into Relation(Name,AddedBy,UpdatedBy) Values ('Brother In Law',1,1)
+Insert Into Relation(Name,AddedBy,UpdatedBy) Values ('Grand Father',1,1)
+Insert Into Relation(Name,AddedBy,UpdatedBy) Values ('Grand Mother',1,1)
+GO
+
+
+Insert Into ServiceCategory(Name,AddedBy,UpdatedBy) Values ('Cardiology',1,1)
+Insert Into ServiceCategory(Name,AddedBy,UpdatedBy) Values ('Gynaecology',1,1)
+Insert Into ServiceCategory(Name,AddedBy,UpdatedBy) Values ('Medicine',1,1)
+Insert Into ServiceCategory(Name,AddedBy,UpdatedBy) Values ('Nephrology',1,1)
+Insert Into ServiceCategory(Name,AddedBy,UpdatedBy) Values ('Ophthalmology',1,1)
+Insert Into ServiceCategory(Name,AddedBy,UpdatedBy) Values ('Orthopedic',1,1)
+Insert Into ServiceCategory(Name,AddedBy,UpdatedBy) Values ('Paediatrics',1,1)
+Insert Into ServiceCategory(Name,AddedBy,UpdatedBy) Values ('Physiotherapy',1,1)
+Insert Into ServiceCategory(Name,AddedBy,UpdatedBy) Values ('Neurology',1,1)
+Insert Into ServiceCategory(Name,AddedBy,UpdatedBy) Values ('Surgery',1,1)
+Insert Into ServiceCategory(Name,AddedBy,UpdatedBy) Values ('Dental',1,1)
+Insert Into ServiceCategory(Name,AddedBy,UpdatedBy) Values ('ENT',1,1)
+Insert Into ServiceCategory(Name,AddedBy,UpdatedBy) Values ('Pathology',1,1)
+Insert Into ServiceCategory(Name,AddedBy,UpdatedBy) Values ('Radiology',1,1)
+Insert Into ServiceCategory(Name,AddedBy,UpdatedBy) Values ('Nursing',1,1)
+GO
+
+
+Insert Into Unit(Name,AddedBy,UpdatedBy) Values ('Unit 1',1,1)
+Insert Into Unit(Name,AddedBy,UpdatedBy) Values ('Unit 2',1,1)
+Insert Into Unit(Name,AddedBy,UpdatedBy) Values ('Unit 3',1,1)
+Insert Into Unit(Name,AddedBy,UpdatedBy) Values ('Unit 4',1,1)
+Insert Into Unit(Name,AddedBy,UpdatedBy) Values ('Unit 5',1,1)
+GO
+
