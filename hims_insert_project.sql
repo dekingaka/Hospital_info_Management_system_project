@@ -51,5 +51,15 @@ Insert Into InsuranceCompany(Name,AddedBy,UpdatedBy) Values ('The oriental Insur
 Insert Into InsuranceCompany(Name,AddedBy,UpdatedBy) Values ('Care Health Insurance',1,1)
 GO
 
-Insert Into Nationality(Name,AddedBy,UpdatedBy) Values ('Indian',1,1)
+Insert Into Nationality(Name,AddedBy,UpdatedBy) Values ('Nigerian',1,1)
 GO
+
+SELECT *
+FROM Nationality
+
+DELETE FROM Nationality
+WHERE Name = 'Indian';
+
+UPDATE Nationality
+SET NationalityID = 1
+WHERE NationalityID = 2;
